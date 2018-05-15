@@ -24,6 +24,41 @@
 #   go-tests = true
 #   unused-packages = true
 
+[[override]]
+  name = "github.com/Sirupsen/logrus"
+  version = "1.0.4"
+
+[[override]]
+  name = "github.com/nlopes/slack"
+  version = "0.1.0"
+
+[[override]]
+  name = "github.com/spf13/cobra"
+  version = "0.0.1"
+
+[[override]]
+  name = "github.com/spf13/viper"
+  version = "1.0.0"
+
+[[override]]
+  name = "github.com/tbruyelle/hipchat-go"
+  version = "1.2.0"
+
+[[override]]
+  branch = "v2"
+  name = "gopkg.in/yaml.v2"
+
+[[constraint]]
+  revision = "11147472b7c934c474a2c484af3c0c5210b7a3af"
+  name = "k8s.io/api"
+
+[[override]]
+  version = "kubernetes-1.8.4"
+  name = "k8s.io/apimachinery"
+
+[[override]]
+  name = "k8s.io/client-go"
+  version = "v6.0.0"
 
 [prune]
   go-tests = true
