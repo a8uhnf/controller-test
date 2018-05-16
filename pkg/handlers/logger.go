@@ -2,6 +2,8 @@ package handlers
 
 import (
 	"fmt"
+	"reflect"
+	api_v1 "k8s.io/api/core/v1"
 )
 
 type Logger struct{}
@@ -19,6 +21,8 @@ func (l *Logger) ObjectUpdated(oldObj, newObj interface{}) {
 }
 
 func logEvent(l *Logger, obj interface{}, ev string) {
-	fmt.Println("----------")
-	fmt.Printf("Resource %s: %s", obj, ev)
+	fmt.Println("__________Start__________")
+	fmt.Printf("Resource %s: %s\n", reflect.TypeOf(obj), ev)
+	fmt.Println(obj.(*api_v1.Secret).ObjectMeta.Name)
+	fmt.Println("__________Finish_________")
 }

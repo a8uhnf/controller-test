@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/Sirupsen/logrus"
@@ -27,8 +26,6 @@ func GetClientOutOfCluster() kubernetes.Interface {
 	if err != nil {
 		logrus.Fatalf("Can not get kubernetes config: %v", err)
 	}
-	fmt.Println("------------")
-	//fmt.Println(config)
 	clientset := kubernetes.NewForConfigOrDie(config)
 	if err != nil {
 		panic(err)

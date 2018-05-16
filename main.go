@@ -170,7 +170,7 @@ func (c *Controller) processNextItem() bool {
 }
 
 func (c *Controller) processItem(key string) error {
-	c.logger.Infof("Processing change to Pod %s", key)
+	c.logger.Infof("Processing change to Secret %s", key)
 
 	obj, exists, err := c.informer.GetIndexer().GetByKey(key)
 	if err != nil {
